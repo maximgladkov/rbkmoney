@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 *.gem
 *.rbc
 .bundle
@@ -15,3 +16,21 @@ spec/reports
 test/tmp
 test/version_tmp
 tmp
+=======
+*.rbc
+*.sassc
+.sass-cache
+capybara-*.html
+.rspec
+/.bundle
+/vendor/bundle
+/log/*
+/tmp/*
+/db/*.sqlite3
+/public/system/*
+/coverage/
+/spec/tmp/*
+**.orig
+rerun.txt
+pickle-email-*.html
+>>>>>>> c419384a11edfee0f12f071ba01ce4a251bd06d5
