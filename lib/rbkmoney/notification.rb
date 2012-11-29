@@ -3,7 +3,6 @@ module RBKMoney
     attr_accessor :params
 
     def initialize(p)
-      empty!
       params = p
     end
 
@@ -82,10 +81,6 @@ module RBKMoney
     def to_s
       values = [:eshop_id, :order_id, :service_name, :recipient_amount, :currency, :status, :user_name, :user_email, :payment_data, :received_hash].map { |property| "#{property}: '#{self.send property}'" }.join(', ')
       "<#{values}>"
-    end
-
-    def empty!
-      @params = Hash.new   
     end
     
     def generated_hash
