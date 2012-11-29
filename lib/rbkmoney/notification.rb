@@ -30,6 +30,10 @@ module RBKMoney
     def order_id
       params['orderId']
     end
+
+    def service_name
+      params['serviceName']
+    end
     
     def eshop_account
       params['eshopAccount']
