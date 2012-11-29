@@ -3,7 +3,7 @@ module RBKMoney
     attr_accessor :params
 
     def initialize(p)
-      params = p
+      @params = p
     end
 
     def accepted?
@@ -19,47 +19,47 @@ module RBKMoney
     end
     
     def eshop_id
-      params['eshopId']
+      @params['eshopId']
     end
     
     def payment_id
-      params['paymentId']
+      @params['paymentId']
     end
     
     def order_id
-      params['orderId']
+      @params['orderId']
     end
 
     def service_name
-      params['serviceName']
+      @params['serviceName']
     end
     
     def eshop_account
-      params['eshopAccount']
+      @params['eshopAccount']
     end
     
     def recipient_amount
-      params['recipientAmount']
+      @params['recipientAmount']
     end
     
     def currency
-      params['recipientCurrency']
+      @params['recipientCurrency']
     end
 
     def status
-      params['paymentStatus']
+      @params['paymentStatus']
     end
     
     def user_name
-      params['userName']
+      @params['userName']
     end
     
     def user_email
-      params['userEmail']
+      @params['userEmail']
     end
 
     def payment_data
-      params['paymentData']
+      @params['paymentData']
     end
 
     def received_at
@@ -67,15 +67,15 @@ module RBKMoney
     end
 
     def secret_key
-      params['secretKey']
+      @params['secretKey']
     end
     
     def received_hash
-      params['hash']
+      @params['hash']
     end
     
     def user_fields
-      params.select{ |p| p =~ /userField_[0-9]+/ }.map{ |k, v| v }
+      @params.select{ |p| p =~ /userField_[0-9]+/ }.map{ |k, v| v }
     end
     
     def to_s
