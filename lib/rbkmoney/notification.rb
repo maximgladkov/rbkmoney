@@ -71,7 +71,7 @@ module RBKMoney
       params['secretKey']
     end
     
-    def hash
+    def received_hash
       params['hash']
     end
     
@@ -80,7 +80,7 @@ module RBKMoney
     end
     
     def to_s
-      values = [:eshop_id, :order_id, :service_name, :recipient_amount, :currency, :status, :user_name, :user_email, :payment_data, :hash].map { |property| "#{property}: '#{self.send property}'" }.join(', ')
+      values = [:eshop_id, :order_id, :service_name, :recipient_amount, :currency, :status, :user_name, :user_email, :payment_data, :received_hash].map { |property| "#{property}: '#{self.send property}'" }.join(', ')
       "<#{values}>"
     end
 
@@ -93,7 +93,7 @@ module RBKMoney
     end
 
     def acknowledge      
-      hash == generated_hash
+      received_hash == generated_hash
     end
   end
 end
