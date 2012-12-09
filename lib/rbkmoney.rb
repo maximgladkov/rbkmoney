@@ -17,15 +17,15 @@ module RBKMoney
   end
   
   def self.eshop_id
-    self.config['eshop_id'].to_i rescue 2016423
+    self.config['eshop_id'].to_i rescue nil
   end
   
   def self.eshop_account
-    self.config['eshop_account'] rescue 'RU038214319'
+    self.config['eshop_account'] rescue nil
   end
   
   def self.currency
-    self.config['currency'] rescue 'RUR'
+    self.config['currency'] rescue nil
   end
   
   def self.success_url
@@ -34,6 +34,10 @@ module RBKMoney
   
   def self.fail_url
     self.config['fail_url'] rescue nil
+  end
+
+  def self.secret_key
+    self.config['secret_key'] rescue nil
   end
 
 end

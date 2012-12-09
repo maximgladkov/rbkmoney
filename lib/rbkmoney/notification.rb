@@ -67,7 +67,7 @@ module RBKMoney
     end
 
     def secret_key
-      @params['secretKey']
+      RBKMoney::secret_key
     end
     
     def received_hash
