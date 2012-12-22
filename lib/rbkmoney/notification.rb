@@ -7,7 +7,7 @@ module RBKMoney
     end
 
     def accepted?
-      status == "3"
+      completed? or status == "3"
     end
 
     def completed?
