@@ -21,13 +21,13 @@ Or install it yourself as:
 
 1. Add config file - rbkmoney.yml at config directory.
   
-2. Creating form:
+2. Creating form(haml):  
    `= rbkmoney_form_tag(RBKMoney::purchase_uri, id: "rbk_form") do`  
-   `  = rbkmoney_setup(@rbk_params)` #hidden items  
-   `  = email_field_tag("email")`    #extra item if require  
-   `  = text_field_tag("name")`  
+   ` = rbkmoney_setup(@rbk_params)` #hidden items  
+   ` = email_field_tag("email")`    #extra item if require  
+   ` = text_field_tag("name")`  
 
-  in controller setup params for form:
+  in controller setup params for form,  
     for example:
     
     
