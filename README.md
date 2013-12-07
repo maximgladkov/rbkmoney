@@ -25,7 +25,8 @@ Or install it yourself as:
    `<%= rbkmoney_form_tag(RBKMoney::purchase_uri, id: "rbk_form") do %>`  
    ` <%= rbkmoney_setup(@rbk_params) %>` #hidden items  
    ` <%= email_field_tag("email")%>`    #extra item if require  
-   ` <%= text_field_tag("name")`%>  
+   ` <%= text_field_tag("name")%>`
+   `<% end %>  
 
   in controller setup params for form,  
     for example:
