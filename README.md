@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 # Rbkmoney
 
 TODO: Write a gem description
@@ -24,13 +23,12 @@ Or install it yourself as:
 2. Creating form:  
    `<%= rbkmoney_form_tag(RBKMoney::purchase_uri, id: "rbk_form") do %>`  
    ` <%= rbkmoney_setup(@rbk_params) %>` #hidden items  
-   ` <%= email_field_tag("email")%>`    #extra item if require  
+   ` <%= email_field_tag("email")%>` #extra item if require  
    ` <%= text_field_tag("name")%>`  
    `<% end %>`   
 
   in controller setup params for form,  
     for example:
-    
     
       @order = Order.new( summa: total_summa)
       @order.save
@@ -46,7 +44,3 @@ Or install it yourself as:
 3. Commit your changes (`git commit -am 'Add some feature'`)
 4. Push to the branch (`git push origin my-new-feature`)
 5. Create new Pull Request
-=======
-rbkmoney
-========
->>>>>>> c419384a11edfee0f12f071ba01ce4a251bd06d5
