@@ -32,7 +32,7 @@ module RBKMoney
       form << tag(:input, :type => 'hidden', :name => 'failUrl',            :value => params[:fail_url])
       form << tag(:input, :type => 'hidden', :name => 'requestedLanguage',  :value => params[:locale])
       form << tag(:input, :type => 'hidden', :name => 'userName',           :value => params[:user_name])
-      form << tag(:input, :type => 'hidden', :name => 'userEmail',          :value => params[:user_email])
+      form << tag(:input, :type => 'hidden', :name => 'user_email',          :value => params[:user_email])
       
       params[:custom].each_with_index do |value, i|
         form << tag(:input, :type => 'hidden', :name => "userField_#{i}", :value => value)
