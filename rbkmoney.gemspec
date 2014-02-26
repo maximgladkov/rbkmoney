@@ -10,7 +10,7 @@ Gem::Specification.new do |gem|
   gem.email         = ["maksim.gladkov@gmail.com"]
   gem.description   = %q{This gem helps to integrate RBK Money payments into Ruby on Rails applications}
   gem.summary       = %q{RBK Money wrapper gem for Ruby on Rails}
-  gem.homepage      = ""
+  gem.homepage      = "http://maximgladkov.com/blog/rbk-money-gem"
 
   gem.files         = `git ls-files`.split($/)
   gem.executables   = gem.files.grep(%r{^bin/}).map{ |f| File.basename(f) }
