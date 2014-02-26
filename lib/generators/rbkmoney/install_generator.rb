@@ -1,4 +1,4 @@
-module RBKMoney
+module Rbkmoney
   module Generators
     class InstallGenerator < Rails::Generators::Base
       desc << "Description:\n    Copies configuration file to your application's config folder."
