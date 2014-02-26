@@ -1,0 +1,23 @@
+development:
+  eshop_id: <YOUR_ESHOP_ID>
+  eshop_account: <YOUR_ESHOP_ACCOUNT>
+  currency: 'RUR'
+  success_url: <SUCCESS_URL>
+  fail_url: <FAIL_URL>
+  secret_key: <SECRET_KEY>
+
+test:
+  eshop_id: <YOUR_ESHOP_ID>
+  eshop_account: <YOUR_ESHOP_ACCOUNT>
+  currency: 'RUR'
+  success_url: <SUCCESS_URL>
+  fail_url: <FAIL_URL>
+  secret_key: <SECRET_KEY>
+
+production:
+  eshop_id: <YOUR_ESHOP_ID>
+  eshop_account: <YOUR_ESHOP_ACCOUNT>
+  currency: 'RUR'
+  success_url: <SUCCESS_URL>
+  fail_url: <FAIL_URL>
+  secret_key: <SECRET_KEY>

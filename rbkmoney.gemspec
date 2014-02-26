@@ -8,7 +8,7 @@ Gem::Specification.new do |gem|
   gem.version       = RBKMoney::VERSION
   gem.authors       = ["Maksim Gladkov"]
   gem.email         = ["maksim.gladkov@gmail.com"]
-  gem.description   = %q{This gem helps to integrate RBK Money payments into Ruby on Rails applications.}
+  gem.description   = %q{This gem helps to integrate RBK Money payments into Ruby on Rails applications}
   gem.summary       = %q{RBK Money wrapper gem for Ruby on Rails}
   gem.homepage      = ""
 
