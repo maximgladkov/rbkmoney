@@ -1,4 +1,4 @@
-# RBK Money
+# RBK Money [![Gem Version](https://badge.fury.io/rb/rbkmoney.png)](http://badge.fury.io/rb/rbkmoney)
 
 This gem helps to integrate RBK Money payments into Ruby on Rails applications.
 
