@@ -11,7 +11,7 @@ module RBKMoney
         form_tag(url, options)
       end
     end
-    
+
     def rbkmoney_setup(options = {})
       params = {
         eshop_id: RBKMoney::eshop_id,
@@ -21,7 +21,9 @@ module RBKMoney
         locale: 'ru',
         custom: []
       }.reject{|k,v| v.nil?}.merge(options)
-      
+
+      params[:hash] = RBKMoney::Utils.request_hash(params)
+
       form = []
       form << tag(:input, :type => 'hidden', :name => 'eshopId',            :value => params[:eshop_id])
       form << tag(:input, :type => 'hidden', :name => 'orderId',            :value => params[:order_id])
@@ -32,12 +34,13 @@ module RBKMoney
       form << tag(:input, :type => 'hidden', :name => 'failUrl',            :value => params[:fail_url])
       form << tag(:input, :type => 'hidden', :name => 'requestedLanguage',  :value => params[:locale])
       form << tag(:input, :type => 'hidden', :name => 'userName',           :value => params[:user_name])
-      form << tag(:input, :type => 'hidden', :name => 'user_email',          :value => params[:user_email])
-      
+      form << tag(:input, :type => 'hidden', :name => 'user_email',         :value => params[:user_email])
+      form << tag(:input, :type => 'hidden', :name => 'hash',               :value => params[:hash])
+
       params[:custom].each_with_index do |value, i|
         form << tag(:input, :type => 'hidden', :name => "userField_#{i}", :value => value)
       end
-      
+
       form.map(&:to_s).join("\n").html_safe
     end
   end
