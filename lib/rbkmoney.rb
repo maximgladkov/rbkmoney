@@ -6,7 +6,7 @@ require 'digest/md5'
 
 module RBKMoney
 
-  PURCHASE_URI = "https://rbkmoney.ru/acceptpurchase.aspx"
+  PURCHASE_URI = 'https://rbkmoney.ru/acceptpurchase.aspx'
 
   def self.config
     @config ||= YAML.load_file("#{Rails.root}/config/rbkmoney.yml")[Rails.env]
@@ -17,32 +17,32 @@ module RBKMoney
   end
 
   def self.eshop_id
-    self.config['eshop_id'].to_i rescue nil
+    config['eshop_id'].to_i
   end
 
   def self.eshop_account
-    self.config['eshop_account'] rescue nil
+    config['eshop_account']
   end
 
   def self.currency
-    self.config['currency'] rescue nil
+    config['currency']
   end
 
   def self.success_url
-    self.config['success_url'] rescue nil
+    config['success_url'] rescue nil
   end
 
   def self.fail_url
-    self.config['fail_url'] rescue nil
+    config['fail_url'] rescue nil
   end
 
   def self.secret_key
-    self.config['secret_key'] rescue nil
+    config['secret_key']
   end
 
 end
 
-require "rbkmoney/version"
+require 'rbkmoney/version'
 require 'rbkmoney/notification'
 require 'rbkmoney/helper'
 require 'rbkmoney/utils'
