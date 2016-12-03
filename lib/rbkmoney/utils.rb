@@ -1,6 +1,6 @@
 module RBKMoney
   module Utils
-    def request_hash(params)
+    def self.request_hash(params)
       params_to_hash = [params[:eshop_id],
                         params[:amount],
                         params[:currency],
