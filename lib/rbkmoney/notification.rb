@@ -85,17 +85,24 @@ module RBKMoney
     end
     
     def generated_hash
-      #Digest::MD5.hexdigest([eshop_id, order_id, service_name, eshop_account, recipient_amount, currency, status, user_name, user_email, payment_data, secret_key].join('::'))
-      opts = {  
-              eshop_id: RBKMoney::eshop_id, 
-              amount: @order.total, 
-              currency: @order.currency, 
-              user_email: @order.email, 
-              item_name: RBKMoney::service_name,
-              order_id: @order.id, 
-              custom: ''
-      }
-      RBKMoney::Utils.request_hash opts
+      #Digest::MD5.hexdigest([eshop_id, order_id, service_name, eshop_account, recipient_amount, currency, status, 
+      #user_name, user_email, payment_data, secret_key].join('::'))
+      
+      params_to_hash = [
+                        RBKMoney::eshop_id,
+                        @order.id,
+                        RBKMoney::service_name,
+                        RBKMoney::eshop_account,
+                        amount: @order.total, 
+                        currency: @order.currency,
+                        status,
+                        @order.full_name,
+                        @order.email, 
+                        payment_data,
+                        RBKMoney.secret_key]
+      string_to_hash = params_to_hash.join('::')
+      Digest::MD5.hexdigest(string_to_hash)
+      
     end
 
     def acknowledge      
