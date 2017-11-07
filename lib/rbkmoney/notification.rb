@@ -93,11 +93,12 @@ module RBKMoney
                         @order.total.to_s.gsub(".",",").to_f, 
                         currency,
                         status,
-                        @order.full_name,
+                        @order.email, 
                         @order.email, 
                         payment_data,
                         RBKMoney.secret_key
       ]
+      #@order.full_name,
       Rails.logger.fatal "hash #{params_to_hash}"
       
       string_to_hash = params_to_hash.join('::')
