@@ -4,6 +4,7 @@ module RBKMoney
 
     def initialize(p)
       @params = p
+      @order = Order.where(id: @params['orderId']).first
     end
 
     def accepted?
@@ -84,11 +85,23 @@ module RBKMoney
     end
     
     def generated_hash
-      Digest::MD5.hexdigest([eshop_id, order_id, service_name, eshop_account, recipient_amount, currency, status, user_name, user_email, payment_data, secret_key].join('::'))
+      #Digest::MD5.hexdigest([eshop_id, order_id, service_name, eshop_account, recipient_amount, currency, status, user_name, user_email, payment_data, secret_key].join('::'))
+      opts = {  
+              eshop_id: RBKMoney::eshop_id, 
+              amount: @order.total, 
+              currency: @order.currency, 
+              user_email: @order.email, 
+              item_name: RBKMoney::service_name,
+              order_id: @order.id, 
+              custom: ''
+      }
+      RBKMoney::Utils.request_hash opts
     end
 
     def acknowledge      
       received_hash == generated_hash
     end
+    alias_method :acknowledge?, :acknowledge
+    
   end
 end
