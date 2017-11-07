@@ -90,7 +90,7 @@ module RBKMoney
                         @order.id,
                         RBKMoney::service_name,
                         RBKMoney::eshop_account,
-                        @order.total.to_s.gsub(".",",").to_f, 
+                        @order.total.to_s.gsub(".",","), 
                         currency,
                         status,
                         @order.email, 
