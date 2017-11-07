@@ -98,7 +98,12 @@ module RBKMoney
                         payment_data,
                         RBKMoney.secret_key
       ]
+      Rails.logger.fatal "hash #{params_to_hash}"
+      
       string_to_hash = params_to_hash.join('::')
+      Rails.logger.fatal "hash string #{string_to_hash}"
+      
+      Rails.logger.fatal "hash md5 #{Digest::MD5.hexdigest(string_to_hash)}"
       Digest::MD5.hexdigest(string_to_hash)
     end
 
