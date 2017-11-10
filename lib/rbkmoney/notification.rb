@@ -93,8 +93,10 @@ module RBKMoney
                         @order.total.to_s.gsub(",","."), 
                         currency,
                         status,
-                        @order.email, 
-                        @order.email, 
+                        #@order.email, 
+                        #@order.email, 
+                        user_name,
+                        user_email
                         payment_data,
                         RBKMoney.secret_key
       ]
