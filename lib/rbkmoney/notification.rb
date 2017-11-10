@@ -96,7 +96,7 @@ module RBKMoney
                         #@order.email, 
                         #@order.email, 
                         user_name,
-                        user_email
+                        user_email,
                         payment_data,
                         RBKMoney.secret_key
       ]
