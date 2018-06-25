@@ -39,6 +39,11 @@ module RBKMoney
   def self.secret_key
     self.config['secret_key'] rescue nil
   end
+  
+  def self.service_name
+    self.config['service_name'] rescue nil
+  end
+  
 
 end
 

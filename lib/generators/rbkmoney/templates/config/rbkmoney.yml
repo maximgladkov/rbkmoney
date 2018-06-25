@@ -5,6 +5,7 @@ development:
   success_url: <SUCCESS_URL>
   fail_url: <FAIL_URL>
   secret_key: <SECRET_KEY>
+  service_name: <SERVICE_NAME>
 
 test:
   eshop_id: <YOUR_ESHOP_ID>
@@ -13,6 +14,7 @@ test:
   success_url: <SUCCESS_URL>
   fail_url: <FAIL_URL>
   secret_key: <SECRET_KEY>
+  service_name: <SERVICE_NAME>
 
 production:
   eshop_id: <YOUR_ESHOP_ID>
@@ -21,3 +23,4 @@ production:
   success_url: <SUCCESS_URL>
   fail_url: <FAIL_URL>
   secret_key: <SECRET_KEY>
+  service_name: <SERVICE_NAME>

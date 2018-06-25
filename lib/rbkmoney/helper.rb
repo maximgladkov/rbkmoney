@@ -15,6 +15,7 @@ module RBKMoney
     def rbkmoney_setup(options = {})
       params = {
         eshop_id: RBKMoney::eshop_id,
+        item_name: RBKMoney::service_name,
         currency: RBKMoney::currency,
         success_url: RBKMoney::success_url,
         fail_url: RBKMoney::fail_url,
